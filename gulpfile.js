@@ -19,7 +19,7 @@ function watchFiles() {
 }
 
 // define complex tasks
-const scripts = gulp.series(js.lint, js.vendors, js.build);
+const scripts = gulp.series(js.lint, js.build);
 const watch = gulp.parallel(watchFiles, server.init, server.reload);
 const build = gulp.series(
     clean.all,

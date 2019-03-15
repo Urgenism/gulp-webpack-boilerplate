@@ -1,15 +1,17 @@
-const path = require("path");
 
 module.exports = {
+  entry: {
+    App: "./src/assets/js/App.js",
+    Vendor: "./src/assets/js/Vendors.js"
+  },
   mode: "production",
   output: {
-    filename: "app.js"
+    filename: "[name].js"
   },
   module: {
     rules: [
       {
         test: /\.js?$/,
-        include: [path.resolve(__dirname, "./src/assets/js")],
         loader: "babel-loader"
       }
     ]
