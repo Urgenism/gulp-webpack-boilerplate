@@ -4,7 +4,8 @@
   "description": "Gulp 4 and webpack 4 starter template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start" : "gulp watch",
+    "build" : "gulp"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,7 @@
     "Gulp",
     "webpack",
     "frontend",
+    "eslint",
     "boilerplate",
     "npm",
     "node"
