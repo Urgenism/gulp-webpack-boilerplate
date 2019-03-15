@@ -2,12 +2,12 @@
 const gulp = require("gulp");
 
 // import tasks
-const copy = require("./gulp/tasks/copy");
-const clean = require("./gulp/tasks/clean");
-const css = require("./gulp/tasks/styles");
-const server = require("./gulp/tasks/browserSync");
-const images = require("./gulp/tasks/images");
-const js = require("./gulp/tasks/scripts");
+const copy = require("./gulp/copy");
+const clean = require("./gulp/clean");
+const css = require("./gulp/styles");
+const server = require("./gulp/browserSync");
+const images = require("./gulp/images");
+const js = require("./gulp/scripts");
 
 // Watch files
 function watchFiles() {

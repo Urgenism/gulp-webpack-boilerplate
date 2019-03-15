@@ -3,7 +3,6 @@ This boilerplate used gulp 4.0.0, webpack
 
 ## Setup
 ---
-
 - Clone or Download this repository in your local computer
 - Install [Node](https://nodejs.org/)
 - Install [Gulp](https://gulpjs.com/) globally through `npm install -g gulp@next`
@@ -11,7 +10,7 @@ This boilerplate used gulp 4.0.0, webpack
 
 ## Commands
 ---
-Go to the Downloaded project folder and the **run** the following commands for respective purpose 
+Go to the Downloaded project folder and the **run** the following commands for given purpose 
 - **To install package**  
 npm install 
 

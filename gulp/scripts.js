@@ -6,7 +6,7 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const eslint = require("gulp-eslint");
 const webpack = require("webpack");
-const webpackconfig = require("../../webpack.config");
+const webpackconfig = require("../webpack.config");
 const webpackstream = require("webpack-stream");
 
 // Lint scripts
