@@ -23,7 +23,7 @@ const scripts = gulp.series(js.lint, js.build);
 const watch = gulp.parallel(watchFiles, server.init, server.reload);
 const build = gulp.series(
     clean.all,
-    gulp.parallel(copy.copyHtml, copy.copyFonts, css.minifyCSS, images.optimizeImages, scripts)
+    gulp.parallel(copy.copyHtml, copy.copyFonts, css.buildCss, css.minifyCSS, images.optimizeImages, scripts)
 );
 
 // expose tasks to CLI

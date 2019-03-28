@@ -1,16 +1,14 @@
 //BREAKPOINT-MIXINS
-$breakpoints: ("phone-small": 340px,
-"phone-md": 370px,
-"phone": 400px,
-"phone-wide": 480px,
-"phablet": 576px,
-"tablet-small": 640px,
-"tablet": 768px,
-"tablet-port": 890px,
-"bootstrap-lg": 992px,
-"tablet-wide": 1024px,
-"desktop": 1248px,
-"desktop-wide": 1440px);
+$breakpoints: (
+        "phone":        400px,
+        "phone-wide":   480px,
+        "phablet":      560px,
+        "tablet-small": 640px,
+        "tablet":       768px,
+        "tablet-wide":  1024px,
+        "desktop":      1248px,
+        "desktop-wide": 1440px
+);
 
 @mixin mq($width, $type: min) {
     @if map_has_key($breakpoints, $width) {
