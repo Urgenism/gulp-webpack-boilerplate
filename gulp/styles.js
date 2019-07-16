@@ -3,7 +3,8 @@ const gulp = require("gulp");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
-const autoprefixer = require("gulp-autoprefixer");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const plumber = require("gulp-plumber");
@@ -17,10 +18,9 @@ function buildCss() {
             outputStyle: "expanded"
         }).on("error", sass.logError))
         .pipe(sourcemaps.init())
-        .pipe(autoprefixer({
-            browsers: ["last 2 versions"],
-            cascade: false
-        }))
+        .pipe(postcss([autoprefixer({
+            env: "production"
+        })]))
         .pipe(sourcemaps.write("./"))
         .pipe(gulp.dest("dist/css"))
         .pipe(browserSync.stream({
@@ -34,10 +34,9 @@ function minifyCSS() {
         .pipe(sass({
             outputStyle: "expanded"
         }).on("error", sass.logError))
-        .pipe(autoprefixer({
-            browsers: ["last 2 versions"],
-            cascade: false
-        }))
+        .pipe(postcss([autoprefixer({
+            env: "production"
+        })]))
         .pipe(rename({
             suffix: ".min"
         }))
