@@ -13,16 +13,16 @@ const plumber = require("gulp-plumber");
 function buildCss() {
     return gulp
         .src("src/assets/scss/**/*.scss")
+        .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass({
             outputStyle: "expanded"
         }).on("error", sass.logError))
-        .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer({
             env: "production"
         })]))
         .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("dist/assets/css"))
         .pipe(browserSync.stream({
             match: "**/*.css"
         }));
@@ -43,7 +43,7 @@ function minifyCSS() {
         .pipe(cleanCSS({
             compatibility: "ie8"
         }))
-        .pipe(gulp.dest("dist/css"));
+        .pipe(gulp.dest("dist/assets/css"));
 }
 
 // exports

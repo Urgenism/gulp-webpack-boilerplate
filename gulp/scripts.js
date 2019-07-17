@@ -29,7 +29,7 @@ function build() {
         ])
         .pipe(webpackstream(webpackconfig, webpack))
         .pipe(uglify())
-        .pipe(gulp.dest("./dist/js/"))
+        .pipe(gulp.dest("./dist/assets/js/"))
     );
 }
 

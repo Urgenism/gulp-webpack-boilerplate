@@ -30,7 +30,7 @@ function optimizeImages() {
                 })
             ])
         )
-        .pipe(gulp.dest("dist/img"));
+        .pipe(gulp.dest("dist/assets/img"));
 }
 
 // exports

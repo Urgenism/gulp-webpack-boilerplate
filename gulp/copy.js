@@ -6,8 +6,8 @@ const newer = require("gulp-newer");
 function copyFonts() {
   return gulp
     .src("./src/assets/fonts/**/*")
-    .pipe(newer("./dist/fonts/"))
-    .pipe(gulp.dest("./dist/fonts/"));
+    .pipe(newer("./dist/assets/fonts/"))
+    .pipe(gulp.dest("./dist/assets/fonts/"));
 }
 
 // Copy html

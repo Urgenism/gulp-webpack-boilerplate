@@ -7,7 +7,7 @@ function init(done) {
     server: {
       baseDir: "./dist/"
     },
-    files: ["./dist/css/app.css", "./dist/js/**/*", "./dist/**/*.html"],
+    files: ["./dist/assets/css/app.css", "./dist/assets/js/**/*", "./dist/**/*.html"],
     port: 3000
   });
   done();
