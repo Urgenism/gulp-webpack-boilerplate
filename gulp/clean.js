@@ -1,9 +1,9 @@
 // packages
-const del = require("del");
+const del = require('del');
 
 // Clean
 function all() {
-  return del(["./dist/"]);
+  return del(['./dist/']);
 }
 
 // exports

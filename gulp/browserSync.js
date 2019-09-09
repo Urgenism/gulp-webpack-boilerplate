@@ -1,13 +1,17 @@
 // packages
-const browsersync = require("browser-sync").create();
+const browsersync = require('browser-sync').create();
 
 // BrowserSync
 function init(done) {
   browsersync.init({
     server: {
-      baseDir: "./dist/"
+      baseDir: './dist/'
     },
-    files: ["./dist/assets/css/app.css", "./dist/assets/js/**/*", "./dist/**/*.html"],
+    files: [
+      './dist/assets/css/app.css',
+      './dist/assets/js/**/*',
+      './dist/**/*.html'
+    ],
     port: 3000
   });
   done();

@@ -1,8 +1,8 @@
 
 module.exports = {
   entry: {
-    App: "./src/assets/js/App.js",
-    Vendor: "./src/assets/js/Vendors.js"
+    app: "./src/assets/js/App.js",
+    vendor: "./src/assets/js/Vendors.js"
   },
   mode: "production",
   output: {
