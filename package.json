@@ -63,7 +63,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
-    "webpack": "^4.39.3",
+    "webpack": "^4.40.2",
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
