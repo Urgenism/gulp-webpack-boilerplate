@@ -3,6 +3,7 @@ const gulp = require("gulp");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
+const notify =  require('gulp-notify');
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cleanCSS = require("gulp-clean-css");
@@ -14,7 +15,7 @@ function buildCss() {
     return gulp
         .src("src/assets/scss/**/*.scss")
         .pipe(sourcemaps.init())
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(sass({
             outputStyle: "expanded"
         }).on("error", sass.logError))
@@ -30,7 +31,7 @@ function buildCss() {
 
 function minifyCSS() {
     return gulp.src("src/assets/scss/**/*.scss")
-        .pipe(plumber())
+        .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
         .pipe(sass({
             outputStyle: "expanded"
         }).on("error", sass.logError))
